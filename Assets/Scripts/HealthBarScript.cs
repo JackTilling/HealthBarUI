@@ -10,6 +10,9 @@ public class HealthBarScript : MonoBehaviour {
     private Image foregroundImg;
 
     [SerializeField]
+    private Text healthText;
+
+    [SerializeField]
     private float updateSpeedSeconds = 0.5f;
 	
     public void HandleHealthChanged(float per) {
@@ -23,9 +26,11 @@ public class HealthBarScript : MonoBehaviour {
         while (elapsed < updateSpeedSeconds) {
             elapsed += Time.deltaTime;
             foregroundImg.fillAmount = Mathf.Lerp(preChangePer, per, elapsed / updateSpeedSeconds);
+            healthText.text = Mathf.Round(foregroundImg.fillAmount*100).ToString();
             yield return null;
         }
 
+        healthText.text = (per*100).ToString();
         foregroundImg.fillAmount = per;
     }
 
