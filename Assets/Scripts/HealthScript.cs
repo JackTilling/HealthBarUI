@@ -11,6 +11,9 @@ public class HealthScript : MonoBehaviour {
     [SerializeField]
     private int currentHealth;
 
+    [SerializeField]
+    private Material healthMat;
+
     // Just so we can see these in the inspector for tutorial purposes
     // Doesn't need to be visable
     [SerializeField]
@@ -30,10 +33,21 @@ public class HealthScript : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space) & currentHealth> 0) {
             ChangeHealth(-10);
         }
-	}
+        if (Input.GetKeyDown(KeyCode.R)) {
+            int toMaxHealth = maxHealth - currentHealth;
+            ChangeHealth(toMaxHealth);
+        }
+    }
 
     private void ChangeHealth(int hpChange) {
         currentHealth += hpChange;
+        if (currentHealth <= 10) {
+            Debug.Log("ACTIVATE");
+            healthMat.SetFloat("Vector1_D8FB485D",1);
+        } else {
+            healthMat.SetFloat("Vector1_D8FB485D", 0);
+        }
+        
 
         // Must convert to float in order to get result out of 1 (percentage for fill amount)
         float currentHealthPer = (float)currentHealth / (float)maxHealth;
