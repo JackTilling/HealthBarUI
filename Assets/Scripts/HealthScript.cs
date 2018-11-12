@@ -27,7 +27,7 @@ public class HealthScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
+		if (Input.GetKeyDown(KeyCode.Space) & currentHealth> 0) {
             ChangeHealth(-10);
         }
 	}
