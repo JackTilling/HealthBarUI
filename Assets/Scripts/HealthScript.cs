@@ -49,13 +49,13 @@ public class HealthScript : MonoBehaviour {
         currentHealth += hpChange;
         if (currentHealth <= 10) {
             Debug.Log("ACTIVATE");
-            healthMat.SetFloat("Vector1_D8FB485D",1);
+            healthMat.SetFloat("Vector1_D8FB485D", 1f);
         }
-        if (currentHealth < 0) {
+        else if (currentHealth < 0) {
             currentHealth = 0;
         } 
         else {
-            healthMat.SetFloat("Vector1_D8FB485D", 0);
+            healthMat.SetFloat("Vector1_D8FB485D", 0f);
         }
         
 

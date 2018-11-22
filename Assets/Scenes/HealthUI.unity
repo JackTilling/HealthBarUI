@@ -759,12 +759,32 @@ Prefab:
         type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 413f737671ed5b94db8f39f387aa99fe, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114131650832541998, guid: 38ffb5e568aca4e4bbe786e0cc330904,
         type: 2}
       propertyPath: canvasTransform
       value: 
       objectReference: {fileID: 1015070951}
+    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.12691349
+      objectReference: {fileID: 0}
+    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.50321823
+      objectReference: {fileID: 0}
+    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.8679245
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38ffb5e568aca4e4bbe786e0cc330904, type: 2}
   m_IsPrefabParent: 0

@@ -33,8 +33,6 @@ public class HealthBarScript : MonoBehaviour {
         StartCoroutine(ChangeToPer(per));
         float dmgF = (float)dmg;
         shakeAmount = (dmgF / 100)*-1.0f;
-        //float randomAmount = UnityEngine.Random.Range(0.05f, 0.15f);
-        //shakeAmount = randomAmount;
         shakeDuration = +0.1f;
     }
 
@@ -62,9 +60,7 @@ public class HealthBarScript : MonoBehaviour {
     // Shakes the camera over a given time period
     void Update() {
         if (shakeDuration > 0) {
-            Debug.Log(shakeAmount);
             canvasTransform.localPosition = originalPos + UnityEngine.Random.insideUnitSphere * shakeAmount;
-
             shakeDuration -= Time.deltaTime * decreaseFactor;
         } else { // Returns it to original position
             shakeDuration = 0f;
