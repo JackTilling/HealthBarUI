@@ -158,12 +158,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &670252714 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114131650832541998, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-    type: 2}
-  m_PrefabInternal: {fileID: 1394739702}
-  m_Script: {fileID: 11500000, guid: d61beadfda3fc724ab0765c7fb179b2f, type: 3}
 --- !u!1 &757016785
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,11 +394,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!224 &1015070951 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224903976061808866, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-    type: 2}
-  m_PrefabInternal: {fileID: 1394739702}
 --- !u!1 &1019353277
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,11 +536,6 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
---- !u!1 &1038832828 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1768735148875368, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-    type: 2}
-  m_PrefabInternal: {fileID: 1394739702}
 --- !u!1 &1319044174
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,50 +724,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114377056171183248, guid: 38ffb5e568aca4e4bbe786e0cc330904,
+    - target: {fileID: 114131650832541998, guid: 38ffb5e568aca4e4bbe786e0cc330904,
         type: 2}
-      propertyPath: healthObject
-      value: 
-      objectReference: {fileID: 1038832828}
-    - target: {fileID: 114377056171183248, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-        type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 670252714}
-    - target: {fileID: 114377056171183248, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-        type: 2}
-      propertyPath: healthMat
-      value: 
-      objectReference: {fileID: 2100000, guid: 799d0c839151ba240ad8d922a2a071b0, type: 2}
-    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-        type: 2}
-      propertyPath: m_Material
-      value: 
+      propertyPath: fullColour.r
+      value: 0.1254902
       objectReference: {fileID: 0}
     - target: {fileID: 114131650832541998, guid: 38ffb5e568aca4e4bbe786e0cc330904,
         type: 2}
-      propertyPath: canvasTransform
-      value: 
-      objectReference: {fileID: 1015070951}
-    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
+      propertyPath: fullColour.g
+      value: 0.5019608
       objectReference: {fileID: 0}
-    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
+    - target: {fileID: 114131650832541998, guid: 38ffb5e568aca4e4bbe786e0cc330904,
         type: 2}
-      propertyPath: m_Color.r
-      value: 0.12691349
-      objectReference: {fileID: 0}
-    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.50321823
-      objectReference: {fileID: 0}
-    - target: {fileID: 114723551908996982, guid: 38ffb5e568aca4e4bbe786e0cc330904,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.8679245
+      propertyPath: fullColour.b
+      value: 0.8666667
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38ffb5e568aca4e4bbe786e0cc330904, type: 2}

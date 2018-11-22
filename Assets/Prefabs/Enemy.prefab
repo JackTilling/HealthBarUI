@@ -142,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122075101651160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.167, y: 0.927, z: -0.139}
+  m_LocalPosition: {x: -0.11, y: 0.927, z: -0.139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224903976061808866}
@@ -265,6 +265,9 @@ MonoBehaviour:
   foregroundImg: {fileID: 114723551908996982}
   healthText: {fileID: 114020394596753764}
   updateSpeedSeconds: 0.3
+  canvasTransform: {fileID: 224903976061808866}
+  fullColour: {r: 0.20784315, g: 0.6627451, b: 1, a: 1}
+  emptyColour: {r: 0.8962264, g: 0.13950695, b: 0.13950695, a: 0}
 --- !u!114 &114377056171183248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,8 +281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  healthObject: {fileID: 0}
-  healthBar: {fileID: 0}
+  healthMat: {fileID: 2100000, guid: 799d0c839151ba240ad8d922a2a071b0, type: 2}
+  healthObject: {fileID: 1768735148875368}
+  healthBar: {fileID: 114131650832541998}
 --- !u!114 &114469816293478334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,8 +332,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 413f737671ed5b94db8f39f387aa99fe, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.12691349, g: 0.50321823, b: 0.8679245, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

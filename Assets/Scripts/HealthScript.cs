@@ -30,28 +30,27 @@ public class HealthScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Alpha1) & currentHealth> 0) {
-            ChangeHealth(-5);
+		if (Input.GetKeyDown(KeyCode.Alpha1) & currentHealth > 0) {
+            ChangeHealth(-5, true);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) & currentHealth > 0) {
-            ChangeHealth(-20);
+            ChangeHealth(-20, true);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) & currentHealth > 0) {
-            ChangeHealth(-30);
+            ChangeHealth(-30, true);
         }
         if (Input.GetKeyDown(KeyCode.R)) {
             int toMaxHealth = maxHealth - currentHealth;
-            ChangeHealth(toMaxHealth);
+            ChangeHealth(toMaxHealth, false);
         }
     }
 
-    private void ChangeHealth(int hpChange) {
+    private void ChangeHealth(int hpChange, bool shake) {
         currentHealth += hpChange;
-        if (currentHealth <= 10) {
-            Debug.Log("ACTIVATE");
+        if (currentHealth <= 20) {
             healthMat.SetFloat("Vector1_D8FB485D", 1f);
         }
-        else if (currentHealth < 0) {
+        if (currentHealth < 0) {
             currentHealth = 0;
         } 
         else {
@@ -62,6 +61,6 @@ public class HealthScript : MonoBehaviour {
         // Must convert to float in order to get result out of 1 (percentage for fill amount)
         float currentHealthPer = (float)currentHealth / (float)maxHealth;
         
-        healthBar.HandleHealthChanged(currentHealthPer, hpChange);
+        healthBar.HandleHealthChanged(currentHealthPer, hpChange, shake);
     }
 }

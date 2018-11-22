@@ -18,6 +18,12 @@ public class HealthBarScript : MonoBehaviour {
     [SerializeField]
     private Transform canvasTransform;
 
+    [SerializeField]
+    private Color fullColour;
+
+    [SerializeField]
+    private Color emptyColour;
+
     // How long the object should shake for.
     private float shakeDuration = 0f;
     private float shakeAmount = 0.1f;
@@ -29,10 +35,14 @@ public class HealthBarScript : MonoBehaviour {
         originalPos = canvasTransform.localPosition;
     }
 
-    public void HandleHealthChanged(float per, int dmg) {
+    public void HandleHealthChanged(float per, int dmg, bool shake) {
         StartCoroutine(ChangeToPer(per));
         float dmgF = (float)dmg;
-        shakeAmount = (dmgF / 100)*-1.0f;
+        if (shake) {
+            shakeAmount = (dmgF / 120) * -1.0f;
+        } else {
+            shakeAmount = 0;
+        }
         shakeDuration = +0.1f;
     }
 
@@ -43,6 +53,7 @@ public class HealthBarScript : MonoBehaviour {
         while (elapsed < updateSpeedSeconds) {
             elapsed += Time.deltaTime;
             foregroundImg.fillAmount = Mathf.Lerp(preChangePer, per, elapsed / updateSpeedSeconds);
+            foregroundImg.color = Color.Lerp(emptyColour, fullColour, per);
             healthText.text = Mathf.Round(foregroundImg.fillAmount*100).ToString();
             yield return null;
         }
