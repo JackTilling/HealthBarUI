@@ -47,14 +47,19 @@ public class HealthScript : MonoBehaviour {
 
     private void ChangeHealth(int hpChange, bool shake) {
         currentHealth += hpChange;
-        if (currentHealth <= 20) {
+        Debug.Log(currentHealth);
+        if (currentHealth <= 20 & currentHealth > 0) {
             healthMat.SetFloat("Vector1_D8FB485D", 1f);
+            Debug.Log("1");
         }
-        if (currentHealth < 0) {
+        else if (currentHealth <= 0) {
+            healthMat.SetFloat("Vector1_D8FB485D", 1f);
             currentHealth = 0;
+            Debug.Log("2");
         } 
         else {
             healthMat.SetFloat("Vector1_D8FB485D", 0f);
+            Debug.Log("3");
         }
         
 
