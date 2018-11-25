@@ -40,6 +40,12 @@ public class HealthBarScript : MonoBehaviour {
         originalPos = canvasTransform.localPosition;
     }
 
+    // Tansforms to look at the camera and flips UI elements so they are correct direction
+    private void LateUpdate() {
+        transform.LookAt(Camera.main.transform);
+        transform.Rotate(0, 180, 0);
+    }
+
     // Controls how much the health bar changes by, how much damage has been dealt and whether to shake or not
     // Usualy called by the script which controls this enemies health values
     public void HandleHealthChanged(float per, int dmg, bool shake) {
@@ -74,12 +80,6 @@ public class HealthBarScript : MonoBehaviour {
         // Updates the current values to the newly calculated ones
         healthText.text = (per*100).ToString();
         foregroundImg.fillAmount = per;
-    }
-
-    // Tansforms to look at the camera and flips UI elements so they are correct direction
-    private void LateUpdate() {
-        transform.LookAt(Camera.main.transform);
-        transform.Rotate(0, 180, 0);
     }
 
     // Shakes the health bar over a period of time given the shake amount and duration necessary
